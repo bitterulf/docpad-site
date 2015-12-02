@@ -1,6 +1,8 @@
 doctype html
+include ./mixins.html.jade
 html(lang="en")
   head
     title= document.title
   body
     h1= document.title
+    +warning('this is working')
