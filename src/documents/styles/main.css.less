@@ -18,8 +18,14 @@ body {
 }
 
 .topbar {
+  padding: @basePadding;
+  img.logo {
+    height: @basePadding * 2;
+    width: @basePadding * 2;
+  }
   h1 {
-    padding: @basePadding;
+    display: inline-block;
+    padding: 0;
     margin: 0;
   }
 }
