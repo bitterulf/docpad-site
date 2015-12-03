@@ -4,3 +4,7 @@ layout: "default"
 ---
 
 ## Hello markdown
+
+| a | b | c |
+| - | - | - |
+| 1 | 2 | 3 |

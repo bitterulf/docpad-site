@@ -1,8 +1,20 @@
-.colors (@backgroundColor: red, @textColor: black) {
+@baseDark: midnightblue;
+@baseBright: lighten(@baseDark, 60%);
+
+.colors (@backgroundColor: @baseDark, @textColor: @baseBright) {
   background-color: @backgroundColor;
   color: @textColor;
 }
 
 body {
+  font-family: 'verdana';
   .colors();
+}
+
+table {
+  border: 1px solid @baseBright;
+}
+
+table th {
+  .colors(@baseBright, @baseDark);
 }
