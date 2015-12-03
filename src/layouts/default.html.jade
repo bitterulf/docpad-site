@@ -1,9 +1,9 @@
 doctype html
-include ./mixins.html.jade
-html(lang="en")
-  head
-    title= document.title
-  body
-    h1= document.title
-    div!= document.body
-    +warning('this is working')
+include ./mixins.jade
+head
+  title= document.title
+  !{ getBlock("meta").toHTML() }
+  !{ getBlock("styles").add(['styles/main.css']).toHTML() }
+body
+  +title(document.title)
+  +content(content)

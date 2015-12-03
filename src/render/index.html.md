@@ -1,9 +1,6 @@
 ---
-title: "index!"
+title: "Index"
 layout: "default"
-isPage: true
 ---
 
-#index
-
-Testing <b>html tags</b>
+## Hello markdown
