@@ -1,5 +1,6 @@
 @baseDark: midnightblue;
 @baseBright: lighten(@baseDark, 60%);
+@basePadding: 1em;
 
 .colors (@backgroundColor: @baseDark, @textColor: @baseBright) {
   background-color: @backgroundColor;
@@ -15,6 +16,11 @@ table {
   border: 1px solid @baseBright;
 }
 
+table td {
+  padding: @basePadding / 2;
+}
+
 table th {
+  padding: @basePadding / 2;
   .colors(@baseBright, @baseDark);
 }
