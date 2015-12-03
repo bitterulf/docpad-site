@@ -5,3 +5,9 @@ mixin title(title)
 
 mixin content(content)
   div.content!= content
+
+mixin menu(documents)
+  div.menu
+    a(href='/') home
+    each document in documents
+      a(href=document.url)= document.title

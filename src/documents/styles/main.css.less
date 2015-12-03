@@ -1,6 +1,7 @@
 @baseDark: midnightblue;
 @baseBright: lighten(@baseDark, 60%);
 @basePadding: 1rem;
+@thickness: @basePadding / 10;
 
 .colors (@backgroundColor: @baseDark, @textColor: @baseBright) {
   background-color: @backgroundColor;
@@ -13,11 +14,19 @@ body {
   .colors();
 }
 
-.topbar {
-  .colors(@baseBright, @baseDark);
+.menu {
+  .colors(darken(@baseBright, 10%), @baseDark);
+  padding: @basePadding;
+  a {
+    color: @baseDark;
+    text-decoration: none;
+    border-left: @thickness * 20 solid darken(@baseBright, 20%);
+    padding: @basePadding;
+  }
 }
 
 .topbar {
+  .colors(@baseBright, @baseDark);
   padding: @basePadding;
   img.logo {
     height: @basePadding * 2;
@@ -32,10 +41,13 @@ body {
 
 .content {
   padding: @basePadding;
+  a {
+    color: lighten(@baseBright, 20%);
+  }
 }
 
 table {
-  border: 1px solid @baseBright;
+  border: @thickness solid @baseBright;
 }
 
 table td {
