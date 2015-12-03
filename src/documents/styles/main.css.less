@@ -1,6 +1,6 @@
 @baseDark: midnightblue;
 @baseBright: lighten(@baseDark, 60%);
-@basePadding: 1em;
+@basePadding: 1rem;
 
 .colors (@backgroundColor: @baseDark, @textColor: @baseBright) {
   background-color: @backgroundColor;
@@ -8,8 +8,24 @@
 }
 
 body {
+  margin: 0;
   font-family: 'verdana';
   .colors();
+}
+
+.topbar {
+  .colors(@baseBright, @baseDark);
+}
+
+.topbar {
+  h1 {
+    padding: @basePadding;
+    margin: 0;
+  }
+}
+
+.content {
+  padding: @basePadding;
 }
 
 table {
