@@ -1,0 +1,1 @@
+docpad.cmd run

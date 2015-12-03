@@ -5,6 +5,7 @@ head
   !{ getBlock("meta").toHTML() }
   !{ getBlock("styles").add(['styles/main.css']).toHTML() }
 body
-  +title(document.title)
+  +head()
   +menu(getCollection("html").findAll({menu: 'top'}).toJSON())
+  +title(document.title)
   +content(content)

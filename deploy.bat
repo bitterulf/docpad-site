@@ -1,1 +1,1 @@
-docpad deploy-ghpages --env static
+docpad.cmd deploy-ghpages --env static

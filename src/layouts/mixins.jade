@@ -1,7 +1,12 @@
-mixin title(title)
+mixin head()
   div.topbar
     img.logo(src="/images/logo.svg")
-    h1.title= title
+    div= site.title
+    div.small= 'generated '+site.date
+
+mixin title(title)
+  div.topbar
+    h1= title
 
 mixin content(content)
   div.content!= content
