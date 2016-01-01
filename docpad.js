@@ -28,13 +28,31 @@ module.exports = {
       return entries;
     },
     architecture: function() {
-      return this.getFilesAtPath('architecture');
+      var entries = this.getFilesAtPath('architecture');
+
+      entries.on("add", function (model) {
+        model.setMetaDefaults({ related: "architecture" });
+      });
+
+      return entries;
     },
     development: function() {
-      return this.getFilesAtPath('development');
+      var entries = this.getFilesAtPath('development');
+
+      entries.on("add", function (model) {
+        model.setMetaDefaults({ related: "development" });
+      });
+
+      return entries;
     },
     visualisation: function() {
-      return this.getFilesAtPath('visualisation');
+      var entries = this.getFilesAtPath('visualisation');
+
+      entries.on("add", function (model) {
+        model.setMetaDefaults({ related: "visualisation" });
+      });
+
+      return entries;
     }
   }
 };

@@ -8,5 +8,7 @@ html
   body
     +head()
     +menu(getCollection("menuTop").toJSON())
+    if document.related
+      +submenu(getCollection(document.related).toJSON())
     +title(document.title)
     +content(content)

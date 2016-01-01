@@ -25,6 +25,17 @@ body {
   }
 }
 
+.submenu {
+  .colors(darken(@baseBright, 20%), @baseDark);
+  padding: @basePadding;
+  a {
+    color: @baseDark;
+    text-decoration: none;
+    border-left: @thickness * 20 solid darken(@baseBright, 30%);
+    padding: @basePadding;
+  }
+}
+
 .topbar {
   .colors(@baseBright, @baseDark);
   padding: @basePadding;

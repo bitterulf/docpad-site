@@ -16,3 +16,8 @@ mixin menu(documents)
     a(href='/') home
     each document in documents
       a(href=document.url)= document.title
+
+mixin submenu(documents)
+  div.submenu
+    each document in documents
+      a(href=document.url)= document.title
