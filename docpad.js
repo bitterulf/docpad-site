@@ -16,5 +16,16 @@ module.exports = {
       date: (new Date()).toISOString().split('T')[0]
     }
   },
-  skipUnsupportedPlugins: false
+  skipUnsupportedPlugins: false,
+  collections: {
+    menuTop: function () {
+      var entries = this.getCollection("documents").findAllLive({ menu: { $eq: "top" } }, [{ date: -1 }]);
+
+      entries.on("add", function (model) {
+        model.setMetaDefaults({ layout: "default" });
+      });
+
+      return entries;
+    }
+  }
 };
