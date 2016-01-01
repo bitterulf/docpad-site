@@ -26,6 +26,15 @@ module.exports = {
       });
 
       return entries;
+    },
+    architecture: function() {
+      return this.getFilesAtPath('architecture');
+    },
+    development: function() {
+      return this.getFilesAtPath('development');
+    },
+    visualisation: function() {
+      return this.getFilesAtPath('visualisation');
     }
   }
 };
