@@ -4,10 +4,11 @@
   "description": "New DocPad project without using a skeleton",
   "dependencies": {
     "docpad": "~6.78.4",
-    "docpad-plugin-jade": "~2.10.0",
+    "docpad-plugin-beautify": "^2.0.0-alpha1",
     "docpad-plugin-ghpages": "~2.4.4",
-    "docpad-plugin-marked": "~2.3.0",
-    "docpad-plugin-less": "~2.4.1"
+    "docpad-plugin-jade": "~2.10.0",
+    "docpad-plugin-less": "~2.4.1",
+    "docpad-plugin-marked": "~2.3.0"
   },
   "main": "node_modules/.bin/docpad-server",
   "scripts": {

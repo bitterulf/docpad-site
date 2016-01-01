@@ -3,6 +3,11 @@ module.exports = {
     ghpages: {
       deployRemote: 'target',
       deployBranch: 'master'
+    },
+    uglify: {
+      html: true,
+      css: true,
+      js: true
     }
   },
   templateData: {
@@ -10,5 +15,6 @@ module.exports = {
       title: 'bitterulfs website',
       date: (new Date()).toISOString().split('T')[0]
     }
-  }
+  },
+  skipUnsupportedPlugins: false
 };
