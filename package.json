@@ -7,14 +7,13 @@
     "docpad-plugin-beautify": "~2.0.0-alpha1",
     "docpad-plugin-cleanurls": "~2.8.1",
     "docpad-plugin-datefromfilename": "~2.0.4",
-    "docpad-plugin-dateurls": "^2.4.0",
     "docpad-plugin-ghpages": "~2.4.4",
     "docpad-plugin-jade": "~2.10.0",
     "docpad-plugin-less": "~2.4.1",
     "docpad-plugin-marked": "~2.3.0",
-    "docpad-plugin-menu": "^2.1.0",
+    "docpad-plugin-menu": "~2.1.0",
     "docpad-plugin-moment": "~2.0.2",
-    "docpad-plugin-navlinks": "^2.0.4"
+    "docpad-plugin-navlinks": "~2.0.4"
   },
   "main": "node_modules/.bin/docpad-server",
   "scripts": {

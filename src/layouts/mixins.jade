@@ -23,13 +23,18 @@ mixin submenu(documents)
       a(href=document.url)= document.title
 
 mixin renderMenuItems(menuItems)
-  each menuItem in menuItems
-    if menuItem.state != 'current'
-      a(href=menuItem.url)= menuItem.title
-    else
-      span= menuItem.title
-      if menuItem.children
-        +renderMenuItems(menuItem.children)
+  ul
+    each menuItem in menuItems
+      li
+        if menuItem.state != 'current'
+          a(href=menuItem.url)= menuItem.title
+          if menuItem.children
+            div.children
+                +renderMenuItems(menuItem.children)
+        else
+          span= menuItem.title
+          if menuItem.children
+            +renderMenuItems(menuItem.children)
 
 mixin renderMenu(document)
   div.newMenu

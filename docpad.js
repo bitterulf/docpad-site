@@ -21,11 +21,6 @@ module.exports = {
     datefromfilename: {
       removeDate: true
     },
-    dateurls: {
-      collectionName: 'all',
-      cleanurl: true,
-      trailingSlashes: true
-    },
     navlinks: {
       collections: {
         all: 1
@@ -33,9 +28,6 @@ module.exports = {
     }
   },
   enabledPlugins: {
-    dateurls: false,
-    cleanurls: false,
-    datefromfilename: false
   },
   templateData: {
     site: {
