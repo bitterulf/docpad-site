@@ -8,6 +8,18 @@ module.exports = {
       html: true,
       css: true,
       js: true
+    },
+    moment: {
+      formats: [
+        {raw: 'date', format: 'MMMM Do YYYY', formatted: 'humanDate'},
+        {raw: 'date', format: 'YYYY-MM-DD', formatted: 'computerDate'}
+      ]
+    },
+    cleanurls: {
+      static: true
+    },
+    datefromfilename: {
+      removeDate: true
     }
   },
   templateData: {

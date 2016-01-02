@@ -10,5 +10,7 @@ html
     +menu(getCollection("menuTop").toJSON())
     if document.related
       +submenu(getCollection(document.related).toJSON())
+    if document.humanDate
+      div= document.humanDate
     +title(document.title)
     +content(content)
