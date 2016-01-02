@@ -32,6 +32,11 @@ module.exports = {
       }
     }
   },
+  enabledPlugins: {
+    dateurls: false,
+    cleanurls: false,
+    datefromfilename: false
+  },
   templateData: {
     site: {
       title: 'bitterulfs website',
