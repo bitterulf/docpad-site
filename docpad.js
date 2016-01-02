@@ -25,6 +25,11 @@ module.exports = {
       collectionName: 'all',
       cleanurl: true,
       trailingSlashes: true
+    },
+    navlinks: {
+      collections: {
+        all: 1
+      }
     }
   },
   templateData: {
@@ -36,7 +41,7 @@ module.exports = {
   skipUnsupportedPlugins: false,
   collections: {
     all: function () {
-      return this.getCollection("documents").findAllLive();
+      return this.getCollection("html").findAllLive();
     },
     menuTop: function () {
       var entries = this.getCollection("documents").findAllLive({ menu: { $eq: "top" } }, [{ date: -1 }]);

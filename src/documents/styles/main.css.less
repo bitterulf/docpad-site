@@ -36,6 +36,17 @@ body {
   }
 }
 
+.navlinks {
+  .colors(darken(@baseBright, 30%), @baseDark);
+  padding: @basePadding;
+  a {
+    color: @baseDark;
+    text-decoration: none;
+    border-left: @thickness * 20 solid darken(@baseBright, 40%);
+    padding: @basePadding;
+  }
+}
+
 .topbar {
   .colors(@baseBright, @baseDark);
   padding: @basePadding;

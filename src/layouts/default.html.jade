@@ -10,7 +10,8 @@ html
     +menu(getCollection("menuTop").toJSON())
     if document.related
       +submenu(getCollection(document.related).toJSON())
+    div.navigation!= getNavLinks()
+    +title(document.title)
     if document.humanDate
       div= document.humanDate
-    +title(document.title)
     +content(content)
