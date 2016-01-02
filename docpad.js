@@ -20,6 +20,11 @@ module.exports = {
     },
     datefromfilename: {
       removeDate: true
+    },
+    dateurls: {
+      collectionName: 'all',
+      cleanurl: true,
+      trailingSlashes: true
     }
   },
   templateData: {
@@ -30,6 +35,9 @@ module.exports = {
   },
   skipUnsupportedPlugins: false,
   collections: {
+    all: function () {
+      return this.getCollection("documents").findAllLive();
+    },
     menuTop: function () {
       var entries = this.getCollection("documents").findAllLive({ menu: { $eq: "top" } }, [{ date: -1 }]);
 
