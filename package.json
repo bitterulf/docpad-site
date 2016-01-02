@@ -12,6 +12,7 @@
     "docpad-plugin-jade": "~2.10.0",
     "docpad-plugin-less": "~2.4.1",
     "docpad-plugin-marked": "~2.3.0",
+    "docpad-plugin-menu": "^2.1.0",
     "docpad-plugin-moment": "~2.0.2",
     "docpad-plugin-navlinks": "^2.0.4"
   },

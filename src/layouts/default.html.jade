@@ -8,6 +8,7 @@ html
   body
     +head()
     +menu(getCollection("menuTop").toJSON())
+    +renderMenu(document)
     if document.related
       +submenu(getCollection(document.related).toJSON())
     div.navigation!= getNavLinks()
