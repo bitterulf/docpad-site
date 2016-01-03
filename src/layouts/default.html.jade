@@ -7,7 +7,6 @@ html
     !{ getBlock("styles").add(['/styles/main.css']).toHTML() }
   body
     +head()
-    +menu(getCollection("menuTop").toJSON())
     +renderMenu(document)
     +renderRelated(getRelatedDocuments())
     div.navigation!= getNavLinks()
