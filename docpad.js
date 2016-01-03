@@ -20,7 +20,9 @@ module.exports = {
     },
     navlinks: {
       collections: {
-        all: 1
+        architecture: 1,
+        development: 1,
+        visualisation: 1
       }
     }
   },

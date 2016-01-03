@@ -9,9 +9,9 @@ html
     +head()
     +renderMenu(document)
     +renderRelated(getRelatedDocuments())
-    div.navigation!= getNavLinks()
     +title(document.title)
     if document.humanDate
       div= document.humanDate
     +renderPages()
     +content(content)
+    div.navigation!= getNavLinks()
