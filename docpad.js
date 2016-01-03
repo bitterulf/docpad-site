@@ -28,6 +28,7 @@ module.exports = {
     }
   },
   enabledPlugins: {
+    cleanurls: false
   },
   templateData: {
     site: {

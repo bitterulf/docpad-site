@@ -9,8 +9,7 @@ html
     +head()
     +menu(getCollection("menuTop").toJSON())
     +renderMenu(document)
-    if document.related
-      +submenu(getCollection(document.related).toJSON())
+    +renderRelated(getRelatedDocuments())
     div.navigation!= getNavLinks()
     +title(document.title)
     if document.humanDate

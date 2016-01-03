@@ -17,10 +17,12 @@ mixin menu(documents)
     each document in documents
       a(href=document.url)= document.title
 
-mixin submenu(documents)
-  div.submenu
+mixin renderRelated(documents)
+  div related
+  ul
     each document in documents
-      a(href=document.url)= document.title
+      li
+        a(href=document.url)= document.title
 
 mixin renderMenuItems(menuItems)
   ul
