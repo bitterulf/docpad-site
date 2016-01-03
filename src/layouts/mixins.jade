@@ -41,3 +41,28 @@ mixin renderMenuItems(menuItems)
 mixin renderMenu(document)
   div.newMenu
     +renderMenuItems(generateMenu(document.url, "all"))
+
+mixin renderPages(collection)
+  if document.pagedCollection
+    - var pageNumber = 0
+    each pagedDocument in getPageCollection(document.pagedCollection).toJSON()
+      div
+        a(href=pagedDocument.url)= pagedDocument.title
+    div
+      if hasPrevPage()
+        span
+          a(href=getPrevPage()) <
+      else
+        span <
+      while pageNumber < document.page.count
+        if document.page.number == pageNumber
+          span.active= pageNumber + 1
+        else
+          span
+            a(href=getPagedUrl(pageNumber))= pageNumber + 1
+        - pageNumber++
+      if hasNextPage()
+        span
+          a(href=getNextPage()) >
+      else
+        span >

@@ -35,10 +35,10 @@ module.exports = {
   skipUnsupportedPlugins: false,
   collections: {
     all: function () {
-      return this.getCollection("html").findAllLive();
+      return this.getCollection("html").findAllLive({isPagedAuto: {$ne: true} });
     },
     menuTop: function () {
-      var entries = this.getCollection("documents").findAllLive({ menu: { $eq: "top" } }, [{ date: -1 }]);
+      var entries = this.getCollection("documents").findAllLive({ isPagedAuto: {$ne: true}, menu: { $eq: "top" } }, [{ date: -1 }]);
 
       entries.on("add", function (model) {
         model.setMetaDefaults({ layout: "default" });
@@ -47,28 +47,28 @@ module.exports = {
       return entries;
     },
     architecture: function() {
-      var entries = this.getFilesAtPath('architecture');
+      var entries = this.getFilesAtPath('posts/architecture').findAllLive({pagedCollection: {$exists: false}, isPagedAuto: {$ne: true} });
 
       entries.on("add", function (model) {
-        model.setMetaDefaults({ related: "architecture" });
+        // model.setMetaDefaults({ related: "architecture" });
       });
 
       return entries;
     },
     development: function() {
-      var entries = this.getFilesAtPath('development');
+      var entries = this.getFilesAtPath('posts/development').findAllLive({pagedCollection: {$exists: false}, isPagedAuto: {$ne: true} });
 
       entries.on("add", function (model) {
-        model.setMetaDefaults({ related: "development" });
+        // model.setMetaDefaults({ related: "development" });
       });
 
       return entries;
     },
     visualisation: function() {
-      var entries = this.getFilesAtPath('visualisation');
+      var entries = this.getFilesAtPath('posts/visualisation').findAllLive({pagedCollection: {$exists: false}, isPagedAuto: {$ne: true} });
 
       entries.on("add", function (model) {
-        model.setMetaDefaults({ related: "visualisation" });
+        // model.setMetaDefaults({ related: "visualisation" });
       });
 
       return entries;
