@@ -15,9 +15,6 @@ module.exports = {
         {raw: 'date', format: 'YYYY-MM-DD', formatted: 'computerDate'}
       ]
     },
-    cleanurls: {
-      static: true
-    },
     datefromfilename: {
       removeDate: true
     },
@@ -28,7 +25,6 @@ module.exports = {
     }
   },
   enabledPlugins: {
-    cleanurls: false
   },
   templateData: {
     site: {

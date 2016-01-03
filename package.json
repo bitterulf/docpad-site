@@ -5,7 +5,6 @@
   "dependencies": {
     "docpad": "~6.78.4",
     "docpad-plugin-beautify": "~2.0.0-alpha1",
-    "docpad-plugin-cleanurls": "~2.8.1",
     "docpad-plugin-datefromfilename": "~2.0.4",
     "docpad-plugin-ghpages": "~2.4.4",
     "docpad-plugin-jade": "~2.10.0",
