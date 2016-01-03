@@ -14,15 +14,38 @@ body {
   .colors();
 }
 
-.navlinks {
-  .colors(darken(@baseBright, 30%), @baseDark);
-  padding: @basePadding;
+.bottom {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  .colors(darken(@baseDark, 20%), @baseBright);
   a {
-    color: @baseDark;
-    text-decoration: none;
-    border-left: @thickness * 20 solid darken(@baseBright, 40%);
-    padding: @basePadding;
+    color: @baseBright;
   }
+}
+
+div.main {
+  color: @baseBright;
+  margin: @basePadding;
+}
+
+.navlinks {
+}
+
+.navlinks-prev {
+  padding-top: @basePadding/2;
+  padding-left: @basePadding;
+  float: left;
+}
+
+.navlinks-next {
+  padding-top: @basePadding/2;
+  padding-right: @basePadding;
+  float: right;
+}
+
+div.navigation {
+  height: @basePadding*2;
 }
 
 .topbar {
@@ -42,6 +65,29 @@ body {
   .small {
     color: lighten(@baseDark, 40%);
   }
+}
+
+.menu {
+  .colors(darken(@baseDark, 20%), @baseBright);
+  a {
+    color: @baseBright;
+  }
+  ul {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+.menu>ul, .bottom>ul{
+  padding-top: @basePadding;
+  padding-bottom: @basePadding;
+}
+
+.bottom>ul{
+  padding-top: 0;
+}
+
+.bottom>div{
+  padding-left: @basePadding;
 }
 
 .small {

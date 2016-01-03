@@ -8,10 +8,9 @@ html
   body
     +head()
     +renderMenu(document)
-    +renderRelated(getRelatedDocuments())
     +title(document.title)
-    if document.humanDate
-      div= document.humanDate
+    +content(document)
     +renderPages()
-    +content(content)
-    div.navigation!= getNavLinks()
+    div.bottom
+      div.navigation!= getNavLinks()
+      +renderRelated(getRelatedDocuments())

@@ -8,11 +8,14 @@ mixin title(title)
   div.topbar
     h1= title
 
-mixin content(content)
-  div.content!= content
+mixin content(document)
+  div.main
+    if document.humanDate
+      div.date= document.humanDate
+    div.content!= document.content
 
 mixin renderRelated(documents)
-  div related
+  div related articles
   ul
     each document in documents
       li
@@ -33,7 +36,7 @@ mixin renderMenuItems(menuItems)
             +renderMenuItems(menuItem.children)
 
 mixin renderMenu(document)
-  div.newMenu
+  div.menu
     +renderMenuItems(generateMenu(document.url, "all"))
 
 mixin renderPages(collection)
